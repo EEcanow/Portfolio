@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imgs/email.png"/>
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/formstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet">
+  <title>Seong Heas Martial Arts: Customer Contact Form</title>
+</head>
+<body>
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header>
+      <div class = "wrapper"><div id="animation"><img id='title' src="images/korean-flag.jpg" alt = "S.H.M.A.A"></img><img id='flag' src="images/american-flag-background1.jpg" alt = "S.H.M.A.A"></img></div></div>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="index.html" id="home">Home</a></li>
+          <li class="nav_item"><a href="KB&TKD.html" id="KB&TKD">KickBoxing & Taekwondo</a></li>
+          <li class="nav_item"><a href="coach.html" id="coach">Staff</a></li>
+          <li class="nav_item"><a href="form.html" id="contact"style="color:blue;text-decoration: underline;">Contact</a></li>
+          <li class="nav_item"><a href="#jump">Jump</a></li>
+
+        </ul>
+    </nav>
+  </header>
+  <main class="about" id="skip" tabindex="0">
+<h1>Contact Us</h1>
+ <form id="jump" action="https://formspree.io/f/moqpwgar" method="POST">
+  
+  <fieldset>
+
+    <label for="name_id">Name</label>
+    <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+
+    <label for="email_id">Email</label>
+    <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+
+    <label for="phone_id">Phone Number</label>
+    <input type="tel" name="phone" id = "phone_id" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+   
+
+
+    <label for="msg">Leave A Message</label>
+    <textarea placeholder="Schedule a free first lesson or let us know if you have any questions." id = "msg" name="mesg" required></textarea><br>
+
+    <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
+    <label for ="cBox">Remember me</label>
+
+    <input type="submit" value = "Submit">
+  </fieldset>
+ </form>
+
+  </main>
+  <footer>
+    <p>Head Coach Tommy Bach <br/>
+        5 Time IKF World Lightweight Kickboxing Champion</p>
+  </footer>
+</body>
+</html>

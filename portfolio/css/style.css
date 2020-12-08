@@ -1,0 +1,228 @@
+body{
+    font-family: 'Raleway', sans-serif; 
+    margin: 0;
+    padding: 0;
+    font-size: 24px; 
+  }
+  
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+  }
+  p{
+      text-align: center;
+  }
+  
+  h2{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+  }
+  main{
+    min-height: 775px;
+  }
+  
+  p {
+    padding: 0 30px;
+  }
+
+  .seperate{
+    color: #000000;
+    border-top: 3px solid #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+  
+  *:focus{
+    border: 2px solid black;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  
+  .gallery{
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+  
+  }
+  
+  .gallery > img{
+    border: 5px black solid;
+    margin: 10px;
+    width: 300px;
+    opacity: 0.5;
+    width: 95%;
+    height: 95%;
+
+  }
+
+  .gallery img:hover{
+    opacity: 1;
+  }
+  
+  /* Navbar */
+  header{
+    background: #fff;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav_item a{
+    color: red;
+    text-decoration: none;
+  }
+  
+  .nav_item a:hover, a:focus{
+    color: blue;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+  
+  @media screen and (max-width: 849px){
+    #title{
+      left: 0;
+    }
+    #animation img{
+      display: block;
+      width: 110px;
+    }
+    .flip-card img{
+      max-width: 500px;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 550px;
+      height: 300px;
+      margin: 0 auto;
+    
+      
+    }
+  }
+
+  @media screen and (min-width: 850px){
+  
+    .nav_links{ 
+      flex-direction: row;
+    }
+    .nav_item a{
+      padding: 10px;
+    }
+      .wrapper{
+    position: relative;
+  }
+
+  #animation{
+    position: absolute;
+    left: 1500px;
+    top: -10px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 1.5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1.5s;
+    width: 100px;
+  }
+
+
+  #animation img{
+    display: inline-block;
+    max-width: 45px;
+
+  }
+  @-webkit-keyframes slide{
+    100%{
+      left: 0;
+
+    }
+  }
+  @keyframes slide{
+    100%{
+      left: 0;
+    }
+  }
+  .flip-card img{
+    max-width: 900px;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+  
+    
+  }
+  }
+
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
