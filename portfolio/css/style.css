@@ -78,7 +78,7 @@ body{
     border: 5px black solid;
     margin: 10px;
     width: 300px;
-    opacity: 0.5;
+    opacity: 0.75;
     width: 95%;
     height: 95%;
 
@@ -116,7 +116,8 @@ body{
             text-decoration-style: dotted;
   }
   
-  @media screen and (max-width: 849px){
+  /* Mobile View */
+  @media screen and (max-width: 765px){
     #title{
       left: 0;
     }
@@ -125,25 +126,63 @@ body{
       width: 110px;
     }
     .flip-card img{
-      max-width: 500px;
+      max-width: 360px;
     }
     .flip-card {
       background-color: transparent;
-      width: 550px;
-      height: 300px;
+      width: 360px;
+      height: 200px;
       margin: 0 auto;
-    
-      
+    }
+    .gallery {
+      display: block;
+    }
+    .gallery > img{
+      border: 5px black solid;
+      margin: 10px;
+      opacity: 1;
     }
   }
 
-  @media screen and (min-width: 850px){
+/* Tablet View */
+@media screen and (min-width: 766px) and (max-width: 1199px){
+  #title{
+    left: 0;
+  }
+  #animation img{
+    display: block;
+    width: 110px;
+  }
+  .flip-card img{
+    max-width: 768px;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 768px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .nav_links{
+    flex-direction: row;
+  }
+  .nav_item a{
+    padding: 10px;
+  }
+}
+
+
+/* Larger Screen */
+  @media screen and (min-width: 1200px){
   
     .nav_links{ 
       flex-direction: row;
     }
     .nav_item a{
-      padding: 10px;
+      padding: 4px;
+      padding-top: 1px;
+      border: 1px solid black;
+      margin: 3px;
     }
       .wrapper{
     position: relative;
@@ -185,8 +224,12 @@ body{
     width: 900px;
     height: 500px;
     margin: 0 auto;
-  
-    
+
+  }
+  .activelink{
+    text-decoration: none !important;
+    color: black !important;
+    background-color: lightgrey;
   }
   }
 
@@ -226,3 +269,17 @@ body{
   transform: rotateY(180deg);
 }
 
+/* Allows flip card to flip using the tab key instead of the mouse */
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.fightvideo {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bold {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
