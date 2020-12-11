@@ -90,7 +90,7 @@ body{
   
   /* Navbar */
   header{
-    background: #fff;
+    background: white;
     border-bottom: 3px solid black;
     padding-bottom: 10px;
     display: flex;
@@ -105,15 +105,16 @@ body{
   }
   
   .nav_item a{
-    color: red;
+    background-color: white;
+    color: darkblue;
     text-decoration: none;
   }
   
   .nav_item a:hover, a:focus{
-    color: blue;
+    color: darkred;
     text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
+    -webkit-text-decoration-style: solid;
+            text-decoration-style: solid;
   }
   
 
@@ -144,6 +145,13 @@ body{
       margin: 10px;
       opacity: 1;
     }
+
+    .activelink{
+      text-decoration: underline !important;
+      color: darkred !important;
+      font-weight: bold;
+
+    }
   }
 
 /* Tablet View */
@@ -170,6 +178,12 @@ body{
   }
   .nav_item a{
     padding: 10px;
+  }
+  .activelink{
+    text-decoration: underline !important;
+    color: darkred !important;
+    font-weight: bold;
+
   }
 }
 
@@ -231,7 +245,7 @@ body{
   .activelink{
     text-decoration: none !important;
     color: black !important;
-    background-color: lightgrey;
+    background-color: lightgrey !important;
   }
   }
 
@@ -298,8 +312,15 @@ body{
 #team{
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #team img{
-  max-width: 300px;
+  max-width: 200px;
+  max-height: 400px;
+  border: 6px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
