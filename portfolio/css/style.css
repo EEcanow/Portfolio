@@ -117,12 +117,6 @@ body{
   }
   
 
-  @media screen and (prefers-reduced-motion: reduce){
-    .wrapper{
-        display: none; 
-    }
-  }
-
 
   /* Mobile View */
   @media screen and (max-width: 765px){
@@ -241,6 +235,15 @@ body{
   }
   }
 
+  @media screen and (prefers-reduced-motion: reduce){
+    .wrapper #animation{
+      -webkit-animation: none;
+      -webkit-animation-delay: none;
+      animation: none;
+      animation-delay: none;
+      left: 0;
+    }
+  }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
@@ -292,3 +295,11 @@ body{
   font-weight: bold;
 }
 
+#team{
+  margin: 0 auto;
+  text-align: center;
+}
+
+#team img{
+  max-width: 300px;
+}
